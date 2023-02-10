@@ -57,7 +57,7 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     container: epitechcontent/epitest-docker:latest
-    needs: [compile, coding-style]
+    needs: [compile]
     steps:
     # Fetch the repository content
       - name: Checkout GH repository
