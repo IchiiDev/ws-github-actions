@@ -117,7 +117,7 @@ Test(case_string, test_null) {
 }
 
 Test(case_string, test_empty) {
-    char *str = strdup("");
+    char *str strdup("");
     int res = case_string(str, false);
 
     cr_assert_eq(res, 0);
