@@ -16,8 +16,8 @@ int swapupcase(char *str)
         return EPITECH_KO;
 
     int size = my_strlen(str);
-    if (size  ERROR)
-        return EPITECH_KO;
+    if (size == ERROR)
+        return EPITECH_KO
     bool is_string_odd = (size % 2) == 1;
     int res = trim_numbers(str, is_string_odd);
     if (res == ERROR)
