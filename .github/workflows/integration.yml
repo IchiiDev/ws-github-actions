@@ -85,7 +85,7 @@ jobs:
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/correction' }}
     steps:
       - name: Checkout GH repository
-        uses: actions/checkout@v3 # Use v3 to be able to fetch all the refs
+        uses: actions/checkout@v4 # Use v3 to be able to fetch all the refs
 
         # We need to fetch all the refs to be able to push them to the mirror
         # This ensures that we do not only checkout the source file
