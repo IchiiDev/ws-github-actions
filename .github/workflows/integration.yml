@@ -13,22 +13,16 @@ env:
 jobs:
   coding-style:
     runs-on: ubuntu-latest
+    container:
+      image: gchr.io/epitech/coding-style-checker:latest
     steps:
     # Fetch the repository content
       - name: Checkout GH repository
         uses: actions/checkout@master
 
-    # Fetch the banana script
-      - name: Get banana script
-        run: curl https://raw.githubusercontent.com/Epitech/coding-style-checker/main/coding-style.sh -o /tmp/coding-style.sh; chmod +x /tmp/coding-style.sh
-
     # Run the banana script
       - name: Run coding-style.sh
-        run: /tmp/coding-style.sh . .
-
-    # Display the banana report file content
-      - name: Display banana report
-        run: cat coding-style-reports.log
+        run: check.sh $(pwd) $(pwd)
 
     # Return an error if the banana report file is not empty
       - name: Report banana result
